@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="toyota.UIControl.bar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="10" d:DesignWidth="170">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Ellipse  x:Name="UIPos0"  Fill="#FFF00000" HorizontalAlignment="Stretch" Height="9"  Stroke="#FFC1B4B4" StrokeThickness="0.6"  Width="9"/>
+        <Ellipse  x:Name="UIPos1"  Fill="#FFF4F4F5" HorizontalAlignment="Stretch" Height="9"  Stroke="#FFC1B4B4" StrokeThickness="0.6"  Width="9" Grid.Column="1"/>
+        <Ellipse  x:Name="UIPos2"  Fill="#FFF4F4F5" HorizontalAlignment="Stretch" Height="9"  Stroke="#FFC1B4B4" StrokeThickness="0.6"  Width="9" Grid.Column="2" />
+        <Ellipse  x:Name="UIPos3"  Fill="#FFF4F4F5" HorizontalAlignment="Stretch" Height="9"  Stroke="#FFC1B4B4" StrokeThickness="0.6"  Width="9" Grid.Column="3" />
+        <Ellipse  x:Name="UIPos4"  Fill="#FFF4F4F5" HorizontalAlignment="Stretch" Height="9"  Stroke="#FFC1B4B4" StrokeThickness="0.6"  Width="9" Grid.Column="4"/>
+        <Ellipse  x:Name="UIPos5"  Fill="#FFF4F4F5" HorizontalAlignment="Stretch" Height="9"  Stroke="#FFC1B4B4" StrokeThickness="0.6"  Width="9" Grid.Column="5"/>
+        <Ellipse  x:Name="UIPos6"  Fill="#FFF4F4F5" HorizontalAlignment="Stretch" Height="9"  Stroke="#FFC1B4B4" StrokeThickness="0.6"  Width="9" Grid.Column="6"/>
+        <Ellipse  x:Name="UIPos7"  Fill="#FFF4F4F5" HorizontalAlignment="Stretch" Height="9"  Stroke="#FFC1B4B4" StrokeThickness="0.6"  Width="9" Grid.Column="7" />
+        <Ellipse  x:Name="UIPos8"  Fill="#FFF4F4F5" HorizontalAlignment="Stretch" Height="9"  Stroke="#FFC1B4B4" StrokeThickness="0.6"  Width="9" Grid.Column="8" />
+        <Ellipse  x:Name="UIPos9"  Fill="#FFF4F4F5" HorizontalAlignment="Stretch" Height="9"  Stroke="#FFC1B4B4" StrokeThickness="0.6"  Width="9" Grid.Column="9"/>
+        <Ellipse  x:Name="UIPos10"  Fill="#FFF4F4F5" HorizontalAlignment="Stretch" Height="9"  Stroke="#FFC1B4B4" StrokeThickness="0.6"  Width="9" Grid.Column="10"/>
+
+    </Grid>
+</UserControl>

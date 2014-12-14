@@ -1,0 +1,11 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:UControl="clr-namespace:Alta_Keyboard.UControl" x:Class="TOYOTA_2.Window1"
+        Title="Window1" Height="700" Width="1000">
+    <Canvas>
+
+        <UControl:UIFacebook Height="527" Width="683"/>
+
+    </Canvas>
+</Window>

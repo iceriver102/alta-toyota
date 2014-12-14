@@ -1,0 +1,233 @@
+﻿<UserControl x:Class="toyota.Assets.Themes.Theme_Timeline_0"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="2362" d:DesignWidth="3544" x:Name="UIWindow" Loaded="UIWindow_Loaded" IsManipulationEnabled="True">
+    <Canvas x:Name="UIRoot" Width="3544" Height="2362" ClipToBounds="True"  >
+        <Canvas x:Name="UILayout" Height="2362" Width="38984" >
+        	<Image Height="2362" Canvas.Left="0" Source="pack://siteoforigin:,,,/Assets/Themes/Images/timeline-1.png" Canvas.Top="0" Width="3544" Panel.ZIndex="1"/>
+        	<Image Height="2362" Canvas.Left="3544" Source="pack://siteoforigin:,,,/Assets/Themes/Images/timeline-2.png" Canvas.Top="0" Width="3544" Panel.ZIndex="1"/>
+        	<Image Height="2362" Canvas.Left="7088" Source="pack://siteoforigin:,,,/Assets/Themes/Images/timeline-3.png" Canvas.Top="0" Width="3544" Panel.ZIndex="1"/>
+        	<Image Height="2362" Canvas.Left="10632" Source="pack://siteoforigin:,,,/Assets/Themes/Images/timeline-4.png" Canvas.Top="0" Width="3544" Panel.ZIndex="1"/>
+        	<Image Height="2362" Canvas.Left="14176" Source="pack://siteoforigin:,,,/Assets/Themes/Images/timeline-5.png" Canvas.Top="0" Width="3544" Panel.ZIndex="1"/>
+			<Image Height="2362" Canvas.Left="17720" Source="pack://siteoforigin:,,,/Assets/Themes/Images/timeline-6.png" Canvas.Top="0" Width="3544" Panel.ZIndex="1"/>
+			<Image Height="2362" Canvas.Left="21264" Source="pack://siteoforigin:,,,/Assets/Themes/Images/timeline-7.png" Canvas.Top="0" Width="3544" Panel.ZIndex="1"/>
+			<Image Height="2362" Canvas.Left="24808" Source="pack://siteoforigin:,,,/Assets/Themes/Images/timeline-8.png" Canvas.Top="0" Width="3544" Panel.ZIndex="1"/>
+			<Image Height="2362" Canvas.Left="28352" Source="pack://siteoforigin:,,,/Assets/Themes/Images/timeline-9.png" Canvas.Top="0" Width="3544" Panel.ZIndex="1"/>
+			<Image Height="2362" Canvas.Left="31896" Source="pack://siteoforigin:,,,/Assets/Themes/Images/timeline-10.png" Canvas.Top="0" Width="3544" Panel.ZIndex="1"/>
+        	<Image x:Name="img6" Source="{Binding ImageSource}" Height="2362" Canvas.Left="35440"  Canvas.Top="-22" Width="3544" Panel.ZIndex="5" RenderTransformOrigin="0.5,0.5" Stretch="UniformToFill">
+        		<Image.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="0"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Image.RenderTransform>
+        		</Image>        	
+			<Image x:Name="img1" IsManipulationEnabled="True" TouchUp="img_TouchUp" Source="{Binding ImageSource}" RenderTransformOrigin="0.5,0.5" Height="1700.121" Width="2643.237" Canvas.Left="340.47" Canvas.Top="253.997" Panel.ZIndex="0" Stretch="UniformToFill" >
+				<Image.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="-7.178"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Image.RenderTransform>
+			</Image>
+			<Border x:Name="img1_1"  Background="Transparent" IsManipulationEnabled="True" TouchDown="img_TouchDown" RenderTransformOrigin="0.5,0.5" Height="1700.121" Width="2643.237" Canvas.Left="340.47" Canvas.Top="253.997" Panel.ZIndex="2" >
+				<Border.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="-7.178"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Border.RenderTransform>
+			</Border>
+            <Image x:Name="img2" IsManipulationEnabled="True" TouchUp="img_TouchUp" Source="{Binding ImageSource}" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="0" Height="1840" Width="2892" Canvas.Left="3732" Canvas.Top="378" Stretch="UniformToFill">
+				<Image.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="0"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Image.RenderTransform>
+				</Image>
+            <Border x:Name="img2_2" Background="Transparent" IsManipulationEnabled="True" TouchDown="img2_2_TouchDown" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="2" Height="1840" Width="2892" Canvas.Left="3732" Canvas.Top="378">
+				<Border.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="0"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Border.RenderTransform>
+				</Border>
+            <Image x:Name="img3" IsManipulationEnabled="True" TouchUp="img_TouchUp"  Source="{Binding ImageSource}" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="0" Height="1714" Width="2520" Canvas.Left="7231" Canvas.Top="450" Stretch="UniformToFill">
+				<Image.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="0"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Image.RenderTransform>
+			</Image>
+            <Border x:Name="img3_3" Background="Transparent" TouchDown="img3_3_TouchDown" IsManipulationEnabled="True" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="2" Height="1714" Width="2520" Canvas.Left="7231" Canvas.Top="450">
+				<Border.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="0"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Border.RenderTransform>
+			</Border>
+            <Image x:Name="img4" IsManipulationEnabled="True" TouchUp="img_TouchUp"  Source="{Binding ImageSource}" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="0" Height="1790.121" Width="2809.316" Canvas.Left="10961.419" Canvas.Top="235.879" Stretch="UniformToFill">
+				<Image.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="7.685"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Image.RenderTransform>
+			</Image>
+            <Border x:Name="img4_4" Background="Transparent" TouchDown="img4_4_TouchDown" IsManipulationEnabled="True" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="2" Height="1790.121" Width="2809.316" Canvas.Left="10961.419" Canvas.Top="235.879">
+				<Border.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="7.685"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Border.RenderTransform>
+			</Border>
+            <Image x:Name="img5" IsManipulationEnabled="True" TouchUp="img_TouchUp"  Source="{Binding ImageSource}" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="0" Height="1690.121" Width="2559.316" Canvas.Left="14865.419" Canvas.Top="323.879" Stretch="UniformToFill">
+				<Image.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="-5.843"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Image.RenderTransform>
+			</Image>
+            <Border x:Name="img5_5" Background="Transparent" IsManipulationEnabled="True" TouchDown="img5_5_TouchDown" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="2" Height="1690.121" Width="2559.316" Canvas.Left="14865.419" Canvas.Top="323.879">
+				<Border.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="-5.843"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Border.RenderTransform>
+			</Border>
+			 <Image x:Name="img7" IsManipulationEnabled="True" TouchUp="img_TouchUp"  Source="{Binding ImageSource}" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="0" Height="1900" Width="2920" Canvas.Left="18033.419" Canvas.Top="215.879" Stretch="UniformToFill">
+				<Image.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="0"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Image.RenderTransform>
+			</Image>
+            <Border x:Name="img7_7" Background="Transparent" IsManipulationEnabled="True" TouchDown="img7_7_TouchDown" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="2" Height="1900" Width="2920" Canvas.Left="18033.419" Canvas.Top="215.879">
+            	<Border.RenderTransform>
+            		<TransformGroup>
+            			<ScaleTransform/>
+            			<SkewTransform/>
+            			<RotateTransform Angle="0"/>
+            			<TranslateTransform/>
+            		</TransformGroup>
+            	</Border.RenderTransform>
+            </Border>
+			<Image x:Name="img8" IsManipulationEnabled="True" TouchUp="img_TouchUp"  Source="{Binding ImageSource}" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="0"  Height="1756" Width="2560" Canvas.Left="21753.419" Canvas.Top="462" Stretch="UniformToFill">
+				<Image.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="0"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Image.RenderTransform>
+			</Image>
+            <Border x:Name="img8_8" Background="Transparent" IsManipulationEnabled="True" TouchDown="img8_8_TouchDown" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="2" Height="1756" Width="2560" Canvas.Left="21753.419" Canvas.Top="462">
+            	<Border.RenderTransform>
+            		<TransformGroup>
+            			<ScaleTransform/>
+            			<SkewTransform/>
+            			<RotateTransform Angle="0"/>
+            			<TranslateTransform/>
+            		</TransformGroup>
+            	</Border.RenderTransform>
+            </Border>
+			<Image x:Name="img9" IsManipulationEnabled="True" TouchUp="img_TouchUp"  Source="{Binding ImageSource}" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="0" Height="1869.016" Width="2856" Canvas.Left="25180.458" Canvas.Top="241.857" Stretch="UniformToFill">
+				<Image.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="8.347"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Image.RenderTransform>
+			</Image>
+            <Border x:Name="img9_9" Background="Transparent" IsManipulationEnabled="True" TouchDown="img9_9_TouchDown" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="2" Height="1869.016" Width="2856" Canvas.Left="25180.458" Canvas.Top="241.857">
+            	<Border.RenderTransform>
+            		<TransformGroup>
+            			<ScaleTransform/>
+            			<SkewTransform/>
+            			<RotateTransform Angle="8.347"/>
+            			<TranslateTransform/>
+            		</TransformGroup>
+            	</Border.RenderTransform>
+            </Border>
+			<Image x:Name="img10" IsManipulationEnabled="True" TouchUp="img_TouchUp"  Source="{Binding ImageSource}" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="0" Height="1869.016" Width="2856" Canvas.Left="28716.458" Canvas.Top="281.857" Stretch="UniformToFill">
+				<Image.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="-6.587"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Image.RenderTransform>
+			</Image>
+            <Border x:Name="img10_10" Background="Transparent" IsManipulationEnabled="True" TouchDown="img10_10_TouchDown" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="2" Height="1869.016" Width="2856" Canvas.Left="28716.458" Canvas.Top="281.857">
+            	<Border.RenderTransform>
+            		<TransformGroup>
+            			<ScaleTransform/>
+            			<SkewTransform/>
+            			<RotateTransform Angle="-6.587"/>
+            			<TranslateTransform/>
+            		</TransformGroup>
+            	</Border.RenderTransform>
+            </Border>
+			<Image x:Name="img11" IsManipulationEnabled="True" TouchUp="img_TouchUp"  Source="{Binding ImageSource}" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="0" Height="1819.498" Width="3015.482" Canvas.Left="32110.771" Canvas.Top="226.065" Stretch="UniformToFill">
+				<Image.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="-6.587"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Image.RenderTransform>
+			</Image>
+            <Border x:Name="img11_11" Background="Transparent" IsManipulationEnabled="True" TouchDown="img11_11_TouchDown" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="2" Height="1819.498" Width="3015.482" Canvas.Left="32110.771" Canvas.Top="226.065">
+            	<Border.RenderTransform>
+            		<TransformGroup>
+            			<ScaleTransform/>
+            			<SkewTransform/>
+            			<RotateTransform Angle="-6.587"/>
+            			<TranslateTransform/>
+            		</TransformGroup>
+            	</Border.RenderTransform>
+            </Border>
+				
+        </Canvas>
+    </Canvas>
+</UserControl>

@@ -1,0 +1,20 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="TOYOTA_2.UIRound"
+	x:Name="UserControl"
+	d:DesignWidth="32" d:DesignHeight="32" Loaded="UserControl_Loaded" >
+
+    <Canvas x:Name="UIRoot" Height="{Binding Height, ElementName=UserControl}" Width="{Binding Width, ElementName=UserControl}">
+        <Ellipse x:Name="UIEffect" Fill="#FFFF0017" Height="{Binding ElementName=UIRoot, Path=Height}"  Stroke="#FFFF0017" Width="{Binding ElementName=UIRoot, Path=Width}">
+				<Ellipse.Effect>
+					<BlurEffect Radius="8"/>
+				</Ellipse.Effect>
+			</Ellipse>
+			<Ellipse x:Name="UIBackground" Fill="#FFC11121" Canvas.Left="1" Canvas.Top="1" Height="30"  Width="30"/>
+        <Label x:Name="UIContent" Content="0" Canvas.Left="1" Canvas.Top="1"  Height="{Binding Height, ElementName=UIBackground}" Width="{Binding Width, ElementName=UIBackground}" FontFamily="Myriad Pro" FontSize="10.667" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White"/>
+		</Canvas>
+</UserControl>

@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="toyota.UIControl.UIItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"
+             d:DesignHeight="119" d:DesignWidth="180" x:Name="Item" >
+    <Canvas x:Name="UIRoot" Height="{Binding Height, ElementName=Item}" Width="{Binding Width, ElementName=Item}" >
+        <Image Width="180" Height="30" Canvas.Left="0" Source="/TOYOTA 2;component/Assets/Images/item_shadow_small.png"/>
+        <Image Width="163" Height="107" Canvas.Left="9" Canvas.Top="10" Source="{Binding ImageSource}" Stretch="Fill" IsManipulationEnabled="True" TouchUp="Item_TouchUp" MouseLeftButtonUp="UIButton_Choose_Event" >
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/TOYOTA 2;component/Assets/Images/item_mask_small.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image x:Name="UIBorder" Width="168" Height="111" Source="/TOYOTA 2;component/Assets/Images/border_image_bar_small.png" Canvas.Left="6" Canvas.Top="8" Visibility="Collapsed" IsManipulationEnabled="True" TouchUp="Item_TouchUp" TouchMove="UITouch_Move_Event" TouchDown="UITouch_Down_Event" MouseLeftButtonDown="UIButton_Down_Event" MouseMove="UIButton_Move_Event" />
+    </Canvas>
+</UserControl>

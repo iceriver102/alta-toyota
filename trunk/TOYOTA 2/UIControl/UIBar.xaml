@@ -1,0 +1,83 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:toyota.UIControl" 
+             xmlns:UIControl="clr-namespace:TOYOTA_2.UIControl" 
+             xmlns:TOYOTA_2="clr-namespace:TOYOTA_2"
+             x:Class="toyota.UIControl.UIBar" 
+             mc:Ignorable="d" 
+             d:DesignHeight="187" d:DesignWidth="1366" IsManipulationEnabled="True">
+    <Canvas x:Name="UIRoot" Width="1366" Height="187" >
+        <Image Width="{Binding Width, ElementName=UIRoot}" Height="{Binding Height, ElementName=UIRoot}" Source="/TOYOTA 2;component/Assets/Images/Background_bar.png"/>
+        <Image Width="165" Height="170" Source="/TOYOTA 2;component/Assets/Images/Background_bar_left.png"/>
+        <Canvas Canvas.Left="0"  Width="{Binding Width, ElementName=UIRoot}"  Height="{Binding Height, ElementName=UIRoot}" ClipToBounds="True">
+            <Image Height="42" Width="144" Canvas.Left="30" Source="/TOYOTA 2;component/Assets/Images/button_small.png" Canvas.Top="10" IsManipulationEnabled="True" MouseLeftButtonUp="UIButon_Mode_Load_Timeline" TouchUp="UITouch_Mode_Load_Timeline_Event"/>
+            <Image Height="42" Width="144" Canvas.Left="30" Source="/TOYOTA 2;component/Assets/Images/button_small.png" Canvas.Top="59" IsManipulationEnabled="True" MouseLeftButtonUp="UIButon_Mode_Load" TouchUp="UITouch_Mode_Load_Event"/>
+            <Image Height="42" Width="144" Canvas.Left="30" Source="/TOYOTA 2;component/Assets/Images/button_small.png" Canvas.Top="113" IsManipulationEnabled="True" MouseLeftButtonUp="UIButon_Print" TouchUp="UITouch_Print_Event"/>
+            <Image Visibility="Hidden" Height="32" Width="144" Canvas.Left="30" Source="/TOYOTA 2;component/Assets/Images/button_small.png" Canvas.Top="110.5" IsManipulationEnabled="True" MouseLeftButtonUp="UIButton_Delete" TouchUp="UITouch_Delete_Event"/>
+            <Label x:Name="UILabel_Change" IsHitTestVisible="False" HorizontalContentAlignment="Right" Content="Ảnh gốc" Canvas.Left="41" Canvas.Top="65" Width="85" FontFamily="Myriad Pro" Foreground="White" VerticalContentAlignment="Center" Height="26" RenderTransformOrigin="0.5,0.5">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform Angle="180"/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label Content="In" IsHitTestVisible="False" HorizontalContentAlignment="Right" Canvas.Left="41" Canvas.Top="119" Width="85" FontFamily="Myriad Pro" Foreground="White" VerticalContentAlignment="Center" Height="26" RenderTransformOrigin="0.5,0.5">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform Angle="180"/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label Visibility="Hidden" Content="Xoá" IsHitTestVisible="False" HorizontalContentAlignment="Right" Canvas.Left="41" Canvas.Top="112.5" Width="85" FontFamily="Myriad Pro" Foreground="White" VerticalContentAlignment="Center" Height="26" RenderTransformOrigin="0.5,0.5">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform Angle="180"/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+
+            <Label Content="Ảnh ghép" IsHitTestVisible="False" HorizontalContentAlignment="Right" Canvas.Left="41" Width="85" FontFamily="Myriad Pro" Foreground="White" VerticalContentAlignment="Center" Height="26" RenderTransformOrigin="0.5,0.5" Canvas.Top="15">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform Angle="180"/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Image Height="170" Canvas.Left="744" Source="/TOYOTA 2;component/Assets/Images/Background_bar_right.png" Stretch="Fill" Width="622"/>
+            <Canvas x:Name="UILayoutPinUser" Width="144" Height="170" Canvas.Left="728">
+                <TOYOTA_2:UIPinUser x:Name="UIPin1"  Canvas.Top="100" Height="32" Width="144" Text="Người dùng 1" ChooseUserEvent="UIChooseUser"/>
+                <TOYOTA_2:UIPinUser x:Name="UIPin2" Canvas.Top="65" Height="32" Width="144" Text="Người dùng 2" ChooseUserEvent="UIChooseUser"/>
+                <TOYOTA_2:UIPinUser x:Name="UIPin3" Canvas.Top="31" Height="32" Width="144" Text="Người dùng 3" ChooseUserEvent="UIChooseUser"/>
+            </Canvas>
+            <Image Visibility="Visible" IsHitTestVisible="False" Width="{Binding Width, ElementName=UIRoot}"  Height="{Binding Height, ElementName=UIRoot}" Source="/TOYOTA 2;component/Assets/Images/Background_bar_mask_small.png"/>
+            <TOYOTA_2:UIRound x:Name="UICount" Canvas.Left="768" Canvas.Top="135" Height="30" Width="30" RenderTransformOrigin="0.5,0.5">
+                <TOYOTA_2:UIRound.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TOYOTA_2:UIRound.RenderTransform>
+            </TOYOTA_2:UIRound>
+            <Label x:Name="UIPageNum" Content="0/0" Height="25" HorizontalContentAlignment="Right" Canvas.Left="140" Width="76" FontFamily="Myriad Pro" FontSize="14.667" FontWeight="Bold" Background="{x:Null}" Foreground="#FF9C1217" IsHitTestVisible="False" RenderTransformOrigin="0.5,0.5">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform Angle="180"/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+        </Canvas>
+
+        <Border Width="580" Height="170" Canvas.Left="165" ClipToBounds="True" IsManipulationEnabled="True" TouchDown="UITouch_Down_Event" TouchUp="UITouch_Up_Event" TouchMove="UITouch_Move_Event">
+            <Canvas x:Name="UILayout" Width="580" Height="165"  >
+                <Canvas x:Name="UILayoutTranslate" Height="119" Width="1172" Canvas.Left="0" Canvas.Top="20"  />
+            </Canvas>
+        </Border>
+
+        <Canvas x:Name="UIlayoutLogin" Canvas.Left="920" Canvas.Top="3" Height="150" Width="420"/>
+    </Canvas>
+</UserControl>

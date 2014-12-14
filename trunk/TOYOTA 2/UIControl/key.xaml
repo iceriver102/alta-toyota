@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="Alta_Keyboard.UControl.Key"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="64" d:DesignWidth="64" x:Name="KeyButton" Cursor="Hand" MouseLeftButtonUp="Key_Click" IsManipulationEnabled="True" TouchUp="Key_TouchUp" FontSize="20" FontFamily="Verdana">
+    <Canvas x:Name="UIRoot" Width="{Binding ElementName=KeyButton, Path=Width}" Height="{Binding ElementName=KeyButton, Path=Height}">
+        <Border Width="{Binding ElementName=UIRoot, Path=Width}" Height="{Binding ElementName=UIRoot, Path=Height}" Background="#FF1F1C1C" >
+            <TextBlock Text="{Binding Path= Text, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"  TextAlignment="Center" FontStretch="SemiCondensed"  VerticalAlignment="Center"  Foreground="White"/>
+        </Border>
+    </Canvas>
+</UserControl>

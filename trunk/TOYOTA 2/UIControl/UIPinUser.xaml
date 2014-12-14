@@ -1,0 +1,21 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="TOYOTA_2.UIPinUser"
+	x:Name="UserControl"
+	d:DesignWidth="144" d:DesignHeight="32" IsManipulationEnabled="True" TouchDown="UITouch_Down_Event" TouchUp="UITouch_Up_Event" TouchMove="UITouch_Move_Event" MouseLeftButtonUp="UIButton_Choose">
+	<Canvas x:Name="UIRoot" Width="144" Height="32">
+		<Image x:Name="empty" Source="/TOYOTA 2;component/Assets/Images/button_small_right.png"  Width="{Binding Width, ElementName=UIRoot}"  Height="{Binding Height, ElementName=UIRoot}"/>
+        <Image x:Name="not_empty" Visibility="Collapsed" Source="/TOYOTA 2;component/Assets/Images/button_small_right_2.png"  Width="{Binding Width, ElementName=UIRoot}"  Height="{Binding Height, ElementName=UIRoot}"/>
+		<Label x:Name="_text" Content="" IsHitTestVisible="False" Width="124" Height="25" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontFamily="Myriad Pro" FontSize="10.667" Foreground="White" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="180"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+    </Canvas>
+</UserControl>
