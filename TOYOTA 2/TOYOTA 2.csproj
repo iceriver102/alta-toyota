@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{36F3CAD2-3F09-4BEF-A87D-660AD672DC19}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TOYOTA_2</RootNamespace>
+    <AssemblyName>TOYOTA 2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <ExpressionBlendVersion>12.0.51020.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>car icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Awesomium.Core, Version=1.7.4.2, Culture=neutral, PublicKeyToken=e1a0d7c8071a5214, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Awesomium Technologies LLC\Awesomium SDK\1.7.4.2\wrappers\Awesomium.NET\Assemblies\Awesomium.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Awesomium.Windows.Controls, Version=1.7.4.2, Culture=neutral, PublicKeyToken=7a34e179b8b61c39, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Awesomium Technologies LLC\Awesomium SDK\1.7.4.2\wrappers\Awesomium.NET\Assemblies\Awesomium.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook">
+      <HintPath>..\packages\Facebook.6.8.0\lib\net45\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WpfAnimatedGif">
+      <HintPath>C:\Users\ThanhGiang\Desktop\WpfAnimatedGif.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Assets\Themes\Theme_Cover_0.xaml.cs">
+      <DependentUpon>Theme_Cover_0.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Themes\Theme_Timeline_0.xaml.cs">
+      <DependentUpon>Theme_Timeline_0.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Themes\UITimeLine.xaml.cs">
+      <DependentUpon>UITimeLine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Class\AsyncPipes.cs" />
+    <Compile Include="Class\CacheUserPin.cs" />
+    <Compile Include="Class\Config.cs" />
+    <Compile Include="Class\CsvFileWriter.cs" />
+    <Compile Include="Class\FacebookExtensions.cs" />
+    <Compile Include="Class\FileExtensions.cs" />
+    <Compile Include="Class\IAsyncBase.cs" />
+    <Compile Include="Class\ImageHelpers.cs" />
+    <Compile Include="Class\MainModel .cs" />
+    <Compile Include="Class\PrintExtensions.cs" />
+    <Compile Include="Class\RegexUtilities.cs" />
+    <Compile Include="Class\SimpleJSON.cs" />
+    <Compile Include="Class\UIElementExtensions.cs" />
+    <Compile Include="Class\User.cs" />
+    <Compile Include="Class\UserCache.cs" />
+    <Compile Include="UIControl\bar.xaml.cs">
+      <DependentUpon>bar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\Key.xaml.cs">
+      <DependentUpon>key.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\UIBar.xaml.cs">
+      <DependentUpon>UIBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\UIItem.xaml.cs">
+      <DependentUpon>UIItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\UILoginForm.xaml.cs">
+      <DependentUpon>UILoginForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\UIPinUser.xaml.cs">
+      <DependentUpon>UIPinUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\UIRound.xaml.cs">
+      <DependentUpon>UIRound.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\UITranslateBar.xaml.cs">
+      <DependentUpon>UITranslateBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\UKeyboard.xaml.cs">
+      <DependentUpon>UKeyboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIFacebook.xaml.cs">
+      <DependentUpon>UIFacebook.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UITVC.xaml.cs">
+      <DependentUpon>UITVC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Assets\MetroScrollBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\MetroScrollViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Themes\Theme_Cover_0.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Themes\Theme_Timeline_0.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Themes\UITimeLine.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Simple Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UIControl\bar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UIControl\key.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UIControl\UIBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UIControl\UIItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UIControl\UILoginForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIControl\UIPinUser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UIControl\UIRound.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UIControl\UITranslateBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIControl\UKeyboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UIFacebook.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UITVC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Assets\Fonts\fontawesome-webfont.eot" />
+    <Resource Include="Assets\Fonts\fontawesome-webfont.ttf" />
+    <None Include="Assets\Fonts\fontawesome-webfont.woff" />
+    <Resource Include="Assets\Fonts\FontAwesome.otf" />
+    <None Include="Assets\Themes\Images\timeline-1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Themes\Images\timeline-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Themes\Images\timeline-3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Themes\Images\timeline-4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Themes\Images\timeline-5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Fonts\fontawesome-webfont.svg" />
+    <Resource Include="Assets\Themes\Images\timeline-10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\timeline-6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\timeline-7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\timeline-8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\timeline-9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\Small\cover-10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\Small\cover-6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\Small\cover-7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\Small\cover-8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\Small\cover-9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\button_left_hover.png" />
+    <Resource Include="Assets\Images\button_right_hover.png" />
+    <Resource Include="Assets\Images\button_big_hover.png" />
+    <Resource Include="Assets\Images\button_normal_hover.png" />
+    <Resource Include="Assets\Images\button_ok_hover.png" />
+    <Resource Include="Assets\Images\button_small_2_hover.png" />
+    <Resource Include="Assets\Images\loadding.gif" />
+    <Resource Include="Assets\Themes\Images\border_image_land.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\border_image.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\Small\cover-1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\Small\cover-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\Small\cover-3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\Small\cover-4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\Small\cover-5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\cover-1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\cover-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\cover-3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\cover-4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\cover-5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\Small\timeline-1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\Small\timeline-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\Small\timeline-3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\Small\timeline-4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\Small\timeline-5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="car icon.ico" />
+    <Resource Include="Assets\Images\logo_big.png" />
+    <Resource Include="Assets\Images\button_small_right_2.png" />
+    <Resource Include="Assets\Images\button_small_right.png" />
+    <Resource Include="Assets\Images\Background_bar_mask_small.png" />
+    <Resource Include="Assets\Images\Background_login_email.png" />
+    <Resource Include="Assets\Images\Background_login.png" />
+    <Resource Include="Assets\Images\Background_logint.png" />
+    <Resource Include="Assets\Images\Background_popup_small.png" />
+    <Resource Include="Assets\Images\item_mask_small.png" />
+    <Resource Include="Assets\Images\border_image_bar_small.png" />
+    <Resource Include="Assets\Images\item_shadow_small.png" />
+    <Resource Include="Assets\Images\Background_bar_right.png" />
+    <Resource Include="Assets\Themes\Images\Timeline_post_0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\timeline_0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Themes\Images\Cover_post_0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\Untitled-4.png" />
+    <Resource Include="Assets\Images\textbox.png" />
+    <Resource Include="Assets\Images\mask.png" />
+    <Resource Include="Assets\Images\logo.png" />
+    <Resource Include="Assets\Images\item_shadow.png" />
+    <Resource Include="Assets\Images\item_mask.png" />
+    <Resource Include="Assets\Images\header_user.png" />
+    <Resource Include="Assets\Images\header_frame.png" />
+    <Resource Include="Assets\Images\header.png" />
+    <Resource Include="Assets\Images\button_small_2.png" />
+    <Resource Include="Assets\Images\button_small.png" />
+    <Resource Include="Assets\Images\button_right.png" />
+    <Resource Include="Assets\Images\button_ok.png" />
+    <Resource Include="Assets\Images\button_normal.png" />
+    <Resource Include="Assets\Images\button_next.png" />
+    <Resource Include="Assets\Images\button_left.png" />
+    <Resource Include="Assets\Images\button_cancel.png" />
+    <Resource Include="Assets\Images\button_big.png" />
+    <Resource Include="Assets\Images\button_back.png" />
+    <Resource Include="Assets\Images\border_image_design_small.png" />
+    <Resource Include="Assets\Images\border_image_design.png" />
+    <Resource Include="Assets\Images\border_image_cover.png" />
+    <Resource Include="Assets\Images\border_image_bar.png" />
+    <Resource Include="Assets\Images\Background_popup.png" />
+    <Resource Include="Assets\Images\background_image_original.png" />
+    <Resource Include="Assets\Images\Background_image_design.png" />
+    <Resource Include="Assets\Images\Background_frame.png" />
+    <Resource Include="Assets\Images\Background_bar_mask.png" />
+    <Resource Include="Assets\Images\Background_bar_left.png" />
+    <Resource Include="Assets\Images\Background_bar.png" />
+    <Resource Include="Assets\Images\Background.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

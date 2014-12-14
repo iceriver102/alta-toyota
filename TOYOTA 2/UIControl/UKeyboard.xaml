@@ -1,0 +1,143 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Alta_Keyboard.UControl" x:Class="Alta_Keyboard.UControl.UKeyboard" 
+             mc:Ignorable="d" x:Name="UIKeyboard" Height="222" Width="633">
+    <Canvas x:Name="UIRoot" Width="{Binding Width, ElementName=UIKeyboard}" Height="{Binding Height, ElementName=UIKeyboard}" ClipToBounds="True">
+        <Canvas x:Name="UIBoard" Canvas.Left="0" Canvas.Top="0" Width="1000" Height="{Binding Height, ElementName=UIKeyboard}">
+            <Grid x:Name="UIContainer_Char" Width="{Binding Width, ElementName=UIRoot}" Height="{Binding Height, ElementName=UIRoot}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+
+                </Grid.RowDefinitions>
+                <local:Key                  Width="63" Height="55" normal_Text="q" shift_Text="Q" Press="key_press"/>
+                <local:Key Grid.Column="1"   Width="63" Height="55" normal_Text="w" shift_Text="W" Press="key_press"/>
+                <local:Key Grid.Column="2"   Width="63" Height="55" normal_Text="e" shift_Text="E" Press="key_press"/>
+                <local:Key Grid.Column="3"    Width="63" Height="55" normal_Text="r" shift_Text="R" Press="key_press"/>
+                <local:Key Grid.Column="4"   Width="63" Height="55" normal_Text="t" shift_Text="T" Press="key_press"/>
+                <local:Key Grid.Column="5"    Width="63" Height="55" normal_Text="y" shift_Text="Y" Press="key_press"/>
+                <local:Key Grid.Column="6"    Width="63" Height="55" normal_Text="u" shift_Text="U" Press="key_press"/>
+                <local:Key Grid.Column="7"    Width="63" Height="55" normal_Text="i" shift_Text="I" Press="key_press"/>
+                <local:Key Grid.Column="8"    Width="63" Height="55" normal_Text="o" shift_Text="O" Press="key_press"/>
+                <local:Key Grid.Column="9"   Width="63" Height="55" normal_Text="p" shift_Text="P" Press="key_press"/>
+
+                <local:Key Grid.Row="1"   Width="63" Height="55" normal_Text="a" shift_Text="A" Press="key_press"/>
+                <local:Key Grid.Row="1"  Width="63" Height="55" normal_Text="s" shift_Text="S" Grid.Column="1" Press="key_press"/>
+                <local:Key Grid.Row="1"   Width="63" Height="55" normal_Text="d" shift_Text="D" Grid.Column="2" Press="key_press"/>
+                <local:Key Grid.Row="1"   Width="63" Height="55" normal_Text="f" shift_Text="F" Grid.Column="3" Press="key_press"/>
+                <local:Key Grid.Row="1"   Width="63" Height="55" normal_Text="g" shift_Text="G" Grid.Column="4" Press="key_press"/>
+                <local:Key Grid.Row="1"   Width="63" Height="55" normal_Text="h" shift_Text="H" Grid.Column="5" Press="key_press"/>
+                <local:Key Grid.Row="1"  Width="63" Height="55" normal_Text="j" shift_Text="J" Grid.Column="6" Press="key_press"/>
+                <local:Key Grid.Row="1"   Width="63" Height="55" normal_Text="k" shift_Text="K" Grid.Column="7" Press="key_press"/>
+                <local:Key Grid.Row="1"   Width="63" Height="55" normal_Text="l" shift_Text="L" Grid.Column="8" Press="key_press"/>
+                <local:Key Grid.Row="1"   Width="63" Height="55" normal_Text="&#8629;" shift_Text="&#8629;" Grid.Column="9" FontSize="24" Press="Key_Enter_Press"/>
+
+                <local:Key Grid.Row="2"  Height="55"   Width="63"   normal_Text="&#xf176;" shift_Text="&#xf176;" Press="Shift_Event" FontFamily="/TOYOTA;component/Assets/Fonts/#FontAwesome"/>
+                <local:Key Grid.Row="2"   Width="63" Height="55" Grid.Column="1" normal_Text="z" shift_Text="Z" Press="key_press"/>
+                <local:Key Grid.Row="2"   Width="63" Height="55" Grid.Column="2"  normal_Text="x" shift_Text="X" Press="key_press"/>
+                <local:Key Grid.Row="2"   Width="63" Height="55" Grid.Column="3" normal_Text="c" shift_Text="C" Press="key_press"/>
+                <local:Key Grid.Row="2"   Width="63" Height="55" Grid.Column="4" normal_Text="v" shift_Text="V" Press="key_press"/>
+                <local:Key Grid.Row="2"   Width="63" Height="55" Grid.Column="5" normal_Text="b" shift_Text="B" Press="key_press"/>
+                <local:Key Grid.Row="2"  Width="63" Height="55" Grid.Column="6" normal_Text="n" shift_Text="N" Press="key_press"/>
+                <local:Key Grid.Row="2"  Width="63" Height="55" Grid.Column="7" normal_Text="m" shift_Text="M" Press="key_press"/>
+                <local:Key Grid.Row="2"  Width="63" Height="55" Grid.Column="8" normal_Text="@" shift_Text="." Press="key_press"/>
+                <local:Key Grid.Row="2"  Height="55"  Width="63" Grid.Column="9"  normal_Text="&#xf177;" shift_Text="&#xf177;" FontFamily="/TOYOTA;component/Assets/Fonts/#FontAwesome" Press="Key_Backspace_Press"/>
+                <local:Key Grid.Row="3"   Width="63" Height="55" normal_Text="#123" shift_Text="#123" Grid.Column="0" FontSize="14" Press="Change_KeyBoard"/>
+
+                <local:Key Grid.Row="3"  Width="63" Height="55" normal_Text="." shift_Text="."  Grid.Column="1" Press="key_press" normal_code="." shift_code="."/>
+                <local:Key Grid.Row="3"   Width="63" Height="55" normal_Text="-" shift_Text="-"  Grid.Column="2" Press="key_press" normal_code="-" shift_code="-" FontSize="19"/>
+                <local:Key Grid.Row="3"   Width="63" Height="55" normal_Text="-" shift_Text="-" Grid.Column="3" Press="key_press" normal_code=".com" shift_code=".com"/>
+                <local:Key Grid.Row="3"   Width="63" Height="55" normal_Text="_" shift_Text="_" Grid.Column="3"  Press="key_press" normal_code="_" shift_code="_"/>
+                <local:Key Grid.Row="3"  Width="128" Height="55" Grid.ColumnSpan="2" normal_Text="space" shift_Text="Space" Grid.Column="4"  Press="key_press" normal_code=" " shift_code=" " FontSize="16"/>
+                <local:Key Grid.Row="3"   Width="63" Height="55" normal_Text="yahoo" shift_Text="yahoo" normal_code="yahoo" shift_code="yahoo" Grid.Column="6" Press="key_press" FontSize="15" />
+                <local:Key Grid.Row="3"   Width="63" Height="55" normal_Text="gmail" shift_Text="gmail" Grid.Column="7" Press="key_press"  normal_code="gmail" shift_code="gmail" FontSize="15"/>
+
+                <local:Key Grid.Row="3"   Width="63" Height="55" normal_Text=".com" shift_Text=".com" normal_code=".com" shift_code=".com" Grid.Column="8" Press="key_press" FontSize="15"/>
+                <local:Key Grid.Row="3"  Width="63" Height="55" normal_Text=".vn" shift_Text=".vn" Grid.Column="9" FontSize="16" Press="key_press"/>
+            </Grid>
+            <Grid x:Name="UIContainer_Num" Width="{Binding Width, ElementName=UIRoot}" Height="{Binding Height, ElementName=UIRoot}" Canvas.Top="0" Canvas.Left="{Binding ElementName=UIRoot, Path=Width}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+
+                </Grid.RowDefinitions>
+                <local:Key                   Width="63" Height="55" normal_Text="1" shift_Text="1" Press="key_press"/>
+                <local:Key Grid.Column="1"    Width="63" Height="55" normal_Text="2" shift_Text="2" Press="key_press"/>
+                <local:Key Grid.Column="2"    Width="63" Height="55" normal_Text="3" shift_Text="3" Press="key_press"/>
+                <local:Key Grid.Column="3"    Width="63" Height="55" normal_Text="4" shift_Text="4" Press="key_press"/>
+                <local:Key Grid.Column="4"   Width="63" Height="55" normal_Text="5" shift_Text="5" Press="key_press"/>
+                <local:Key Grid.Column="5"    Width="63" Height="55" normal_Text="6" shift_Text="6" Press="key_press"/>
+                <local:Key Grid.Column="6"    Width="63" Height="55" normal_Text="7" shift_Text="7" Press="key_press"/>
+                <local:Key Grid.Column="7"    Width="63" Height="55" normal_Text="8" shift_Text="8" Press="key_press"/>
+                <local:Key Grid.Column="8"    Width="63" Height="55" normal_Text="9" shift_Text="9" Press="key_press"/>
+                <local:Key Grid.Column="9"   Width="63" Height="55" normal_Text="0" shift_Text="0" Press="key_press"/>
+
+                <local:Key Grid.Row="1"   Width="63" Height="55" normal_Text="@" shift_Text="^" Press="key_press"/>
+                <local:Key Grid.Row="1"  Width="63" Height="55" normal_Text="#" shift_Text="]" Grid.Column="1" Press="key_press"/>
+                <local:Key Grid.Row="1"   Width="63" Height="55" normal_Text="&#8363;" shift_Text="[" Grid.Column="2" Press="key_press"/>
+                <local:Key Grid.Row="1"   Width="63" Height="55" normal_Text="%" shift_Text="{}{" Grid.Column="3" Press="key_press"/>
+                <local:Key Grid.Row="1"   Width="63" Height="55" normal_Text="&amp;" shift_Text="}" Grid.Column="4" Press="key_press"/>
+                <local:Key Grid.Row="1"   Width="63" Height="55" normal_Text="*" shift_Text="&lt;" Grid.Column="5" Press="key_press"/>
+                <local:Key Grid.Row="1"  Width="63" Height="55" normal_Text="(" shift_Text="&gt;" Grid.Column="6" Press="key_press"/>
+                <local:Key Grid.Row="1"   Width="63" Height="55" normal_Text=")" shift_Text="$" Grid.Column="7" Press="key_press"/>
+                <local:Key Grid.Row="1"   Width="63" Height="55" normal_Text="-" shift_Text="\" Grid.Column="8" Press="key_press" FontFamily="/TOYOTA;component/Assets/Fonts/#FontAwesome"/>
+                <local:Key Grid.Row="1"   Width="63" Height="55" normal_Text="&#8629;" shift_Text="&#8629;" Grid.Column="9" FontSize="24" Press="Key_Enter_Press"/>
+
+                <local:Key Grid.Row="2"  Height="55"   Width="63"   normal_Text="&#xf178;" shift_Text="&#xf177;" Press="Shift_Event" FontFamily="/TOYOTA;component/Assets/Fonts/#FontAwesome"/>
+                <local:Key Grid.Row="2"   Width="63" Height="55" Grid.Column="1" normal_Text="," shift_Text="&#169;" Press="key_press" />
+                <local:Key Grid.Row="2"   Width="63" Height="55" Grid.Column="2"  normal_Text="!" shift_Text="." Press="key_press"/>
+                <local:Key Grid.Row="2"   Width="63" Height="55" Grid.Column="3" normal_Text=";" shift_Text="-" Press="key_press"/>
+                <local:Key Grid.Row="2"   Width="63" Height="55" Grid.Column="4" normal_Text=":" shift_Text="+" Press="key_press"/>
+                <local:Key Grid.Row="2"   Width="63" Height="55" Grid.Column="5" normal_Text="=" shift_Text="'" Press="key_press"/>
+                <local:Key Grid.Row="2"  Width="63" Height="55" Grid.Column="6" normal_Text="_" shift_Text="&quot;" Press="key_press"/>
+                <local:Key Grid.Row="2"  Width="63" Height="55" Grid.Column="7" normal_Text="?" shift_Text="~" Press="key_press"/>
+                <local:Key Grid.Row="2"  Width="63" Height="55" Grid.Column="8" normal_Text="|" shift_Text="/" Press="key_press"/>
+                <local:Key Grid.Row="2"  Height="55"  Width="63" Grid.Column="9"  normal_Text="&#xf177;" shift_Text="&#xf177;" FontFamily="/TOYOTA;component/Assets/Fonts/#FontAwesome" Press="Key_Backspace_Press"/>
+                <local:Key Grid.Row="3"   Width="63" Height="55" normal_Text="abcd" shift_Text="abcd" Grid.Column="0" FontSize="14" Press="Change_KeyBoard"/>
+
+                <local:Key Grid.Row="3"  Width="63" Height="55" normal_Text="." shift_Text="." Grid.Column="1" Press="key_press" normal_code="." shift_code="."/>
+                <local:Key Grid.Row="3"   Width="63" Height="55" normal_Text="-" shift_Text="-"  Grid.Column="2" Press="key_press" normal_code="-" shift_code="-"  FontSize="19"/>
+                <local:Key Grid.Row="3"   Width="63" Height="55" normal_Text="_" shift_Text="_" Grid.Column="3"  Press="key_press" normal_code="_" shift_code="_"/>
+                <local:Key Grid.Row="3"   Width="63" Height="55" normal_Text="_" shift_Text="_" Grid.Column="3"  Press="key_press" normal_code="_" shift_code="_"/>
+                <local:Key Grid.Row="3"  Width="128" Height="55" Grid.ColumnSpan="2" normal_Text="space" shift_Text="Space" Grid.Column="4"  Press="key_press" normal_code=" " shift_code=" " FontSize="16"/>
+                <local:Key Grid.Row="3"   Width="63" Height="55" normal_Text="yahoo" shift_Text="yahoo" normal_code="yahoo" shift_code="yahoo" Grid.Column="6" Press="key_press" FontSize="15" />
+                <local:Key Grid.Row="3"   Width="63" Height="55" normal_Text="gmail" shift_Text="gmail" Grid.Column="7" Press="key_press"  normal_code="gmail" shift_code="gmail" FontSize="15"/>
+
+                <local:Key Grid.Row="3"   Width="63" Height="55" normal_Text=".com" shift_Text=".com" normal_code=".com" shift_code=".com" Grid.Column="8" Press="key_press" FontSize="15"/>
+                <local:Key Grid.Row="3"  Width="63" Height="55" normal_Text=".vn" shift_Text=".vn" Grid.Column="9" FontSize="16" Press="key_press"/>
+
+            </Grid>
+        </Canvas>
+    </Canvas>
+</UserControl>

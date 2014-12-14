@@ -1,0 +1,132 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Alta_Keyboard.UControl" 
+             xmlns:awe="http://schemas.awesomium.com/winfx" 
+             xmlns:gif="http://wpfanimatedgif.codeplex.com"
+             xmlns:UIControl="clr-namespace:toyota.UIControl" 
+             xmlns:Themes="clr-namespace:toyota.Assets.Themes" 
+             xmlns:Themes1="clr-namespace:TOYOTA_2.Assets.Themes" 
+             x:Class="Alta_Keyboard.UControl.UIFacebook" 
+             mc:Ignorable="d" 
+             d:DesignHeight="572" d:DesignWidth="683"  x:Name="UIWindow" Loaded="UIWindow_Loaded" DragEnter="UIWindow_DragEnter" DragLeave="UIWindow_DragLeave" Drop="UIWindow_Drop" AllowDrop="True">
+    <Canvas x:Name="UIRoot" Width="{Binding Width, ElementName=UIWindow}" Height="{Binding Height, ElementName=UIWindow}" ClipToBounds="True" >
+        <Canvas x:Name="UIFrame1" Width="{Binding Width, ElementName=UIRoot}" Height="{Binding Height, ElementName=UIRoot}" Canvas.Left="0">
+            <Image Width="{Binding Width, ElementName=UIRoot}" Height="{Binding Height, ElementName=UIRoot}" Source="/TOYOTA 2;component/Assets/Images/Background_frame.png" />
+            <Grid Background="Transparent" Height="572" Width="659" Canvas.Left="12">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="64*"/>
+                    <RowDefinition Height="2"/>
+                    <RowDefinition Height="323*"/>
+                    <RowDefinition Height="183*"/>
+                </Grid.RowDefinitions>
+                <Canvas>
+                    <Image Source="/TOYOTA 2;component/Assets/Images/header_user.png" Width="659" Height="64" Stretch="UniformToFill" />
+                    <Image Height="45" Canvas.Left="25" Canvas.Top="9" Width="158" Source="/TOYOTA 2;component/Assets/Images/logo.png" IsManipulationEnabled="True" TouchUp="UITouch_Refresh" MouseLeftButtonUp="UIMouse_Refresh"/>
+                    <Image Height="60" Width="91" Canvas.Left="396" Source="{Binding ImageSource}" Canvas.Top="2">
+                        <Image.OpacityMask>
+                            <ImageBrush ImageSource="/TOYOTA 2;component/Assets/Images/mask.png"/>
+                        </Image.OpacityMask>
+                    </Image>
+                </Canvas>
+                <awe:WebControl x:Name="UIWebview"  AddressChanged="UIWebview_AddressChanged" Grid.Row="2" LoadingFrameComplete="UIWebview_LoadingFrameComplete" Grid.RowSpan="2" Margin="0,0,0,10"/>
+                <Canvas x:Name="UILayout_Action" Canvas.Left="212" Canvas.Top="395" Margin="208.5,100,208.5,37.5" Grid.Row="3" Visibility="Hidden">
+                    <TextBlock HorizontalAlignment="Left" Height="35" Grid.Row="3" TextWrapping="Wrap" Text="Vui lòng chọn nút &quot;Save Changes&quot; để thay cover." VerticalAlignment="Top" Width="386" FontFamily="Myriad Pro" FontSize="18.667" Foreground="#FF949494" Canvas.Left="-70" Canvas.Top="-40"/>
+                    <Image Width="101" Source="/TOYOTA 2;component/Assets/Images/button_back.png" Height="40" Canvas.Left="10" MouseLeftButtonUp="UIButton_Back_Event" IsManipulationEnabled="True" TouchUp="UITouch_Back_Button_Event"/>
+                    <Image Width="101" Source="/TOYOTA 2;component/Assets/Images/button_next.png" Height="40" Canvas.Left="131" MouseLeftButtonUp="UIButton_Compete_Set_Cover_Event" IsManipulationEnabled="True" TouchUp="UITouch_Compete_Set_Cover_Event"/>
+                    <Label Content="QUAY LẠI" IsHitTestVisible="False" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Canvas.Left="23" Height="22" Canvas.Top="8" Width="85" FontFamily="Myriad Pro" FontSize="13" Foreground="White"/>
+                    <Label Content="HOÀN TẤT" IsHitTestVisible="False" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Canvas.Left="131" Height="22" Canvas.Top="9" Width="85" FontFamily="Myriad Pro" FontSize="13" Foreground="White"/>
+                </Canvas>
+            </Grid>
+            <Image x:Name="UILoadding" Height="25" Width="24" IsManipulationEnabled="True" TouchUp="UITouch_Refresh" Canvas.Left="205" Canvas.Top="35" gif:ImageBehavior.AnimatedSource="Assets/Images/loadding.gif"/>
+            <Canvas x:Name="UIPopup_Facebook" Height="572" Width="659" Canvas.Left="12" Background="Transparent" Visibility="Hidden" >
+                <Image Height="572" Width="659" Source="/TOYOTA 2;component/Assets/Images/Background_popup.png" />
+                <TextBlock Canvas.Left="173" TextWrapping="WrapWithOverflow" TextAlignment="Center"  Canvas.Top="133" FontFamily="Myriad Pro" Foreground="White" FontSize="16" FontWeight="SemiBold" Width="325" TextTrimming="WordEllipsis" TextOptions.TextHintingMode="Fixed"><Run Text="Bạn có muốn cập nhật thông tin"/><LineBreak/><Run Text="và công nghệ mới nhất từ  Toyota mỗi ngày?"/></TextBlock>
+                <Image Height="25" Canvas.Left="360" Canvas.Top="194" Width="100" Source="/TOYOTA 2;component/Assets/Images/button_ok.png" MouseLeftButtonUp="UIButton_Like" IsManipulationEnabled="True" TouchUp="UITouch_Ok_Event"/>
+                <TextBlock IsEnabled="False" Canvas.Left="360" IsHitTestVisible="False" TextWrapping="NoWrap" Padding="0,6,0,0" Text="ĐỒNG Ý" Canvas.Top="194" Height="25" TextAlignment="Center" Width="100" FontFamily="Myriad Pro" FontSize="13" Foreground="#FFF5E9E9"/>
+                <Image Height="25" Canvas.Left="221" Canvas.Top="194" Width="100" Source="/TOYOTA 2;component/Assets/Images/button_cancel.png" MouseLeftButtonUp="UIButton_Dont_Like" IsManipulationEnabled="True" TouchUp="UITouch_Cancel_Event"/>
+                <TextBlock Canvas.Left="221" IsHitTestVisible="False" TextWrapping="NoWrap" Padding="0,6,0,0" Text="ĐỂ SAU" Canvas.Top="194" Height="25" TextAlignment="Center" Width="100" FontFamily="Myriad Pro" FontSize="13" Foreground="#FF949494"/>
+            </Canvas>
+
+        </Canvas>
+        <Canvas x:Name="UIImage" Width="{Binding Width, ElementName=UIRoot}" Height="{Binding Height, ElementName=UIRoot}" Canvas.Left="0" ClipToBounds="True" Visibility="Visible">
+            <Image Width="{Binding Width, ElementName=UIRoot}" Height="{Binding Height, ElementName=UIRoot}" Source="/TOYOTA 2;component/Assets/Images/Background_frame.png"  />
+            <Image Height="53" Canvas.Left="169" Width="340" Source="/TOYOTA 2;component/Assets/Images/header_frame.png"/>
+            <Label Content="Chọn khung hình bạn thích" Canvas.Left="194" Width="296" Height="53" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Myriad Pro" FontSize="16" FontWeight="Bold" Foreground="White"/>
+            <Image  Height="142" Canvas.Left="56" Canvas.Top="106" Width="213" Source="{Binding ImageSource}" Stretch="UniformToFill"/>
+            <Image Height="178" Canvas.Left="52" Canvas.Top="74" Width="222" Source="/TOYOTA 2;component/Assets/Images/background_image_original.png"/>
+            <Label Content="Hình ảnh gốc" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Canvas.Left="52" Canvas.Top="74" Width="222" FontStyle="Italic" Foreground="#FF949494" FontFamily="Myriad Pro" FontSize="14"/>
+            <Canvas  Height="188" Canvas.Left="338" Canvas.Top="74" Width="290">
+                <Themes:Theme_Timeline_0  x:Name="UITimeline_View" Height="179" Canvas.Left="4" Width="283" TouchBehavior="TouchBehavior_Event" Canvas.Top="4" />
+                <Image Source="Assets/Themes/Images/border_image.png" Height="188" Width="290" IsHitTestVisible="False" IsEnabled="False"/>
+            </Canvas>
+            <Image Height="167" Canvas.Left="378" Canvas.Top="106" Width="262" Source="/TOYOTA 2;component/Assets/Images/Background_image_design.png" IsManipulationEnabled="True" TouchMove="Touch_Swipe_Event" TouchDown="Touch_Down_Event" TouchUp="Touch_Up_Event" Visibility="Hidden"/>
+            <UIControl:bar x:Name="bar1" Canvas.Left="410" Canvas.Top="263" Height="10" Width="150"/>
+            <Image x:Name="UIRight1" Height="45" Canvas.Left="620" Canvas.Top="145" Width="54" Source="/TOYOTA 2;component/Assets/Images/button_right.png" MouseLeftButtonUp="UINext_Event" TouchUp="UITouch_Next_Event" IsManipulationEnabled="True"/>
+            <Image x:Name="UILeft1" Height="45" Canvas.Left="294" Canvas.Top="145" Width="54" Source="/TOYOTA 2;component/Assets/Images/button_left.png" Visibility="Hidden" MouseLeftButtonUp="UIBack_Event" TouchUp="UITouch_Back_Event" IsManipulationEnabled="True"/>
+            <Themes:Theme_Cover_0 x:Name="UICover_View" Canvas.Top="292" Canvas.Left="69" Height="210" Width="548" TouchBehavior="TouchBehavior_Event" />
+            <Image Height="216"  Canvas.Left="66" Canvas.Top="290" Width="554" IsEnabled="False" IsHitTestVisible="False" Source="Assets/Themes/Images/border_image_land.png"/>
+            <UIControl:bar x:Name="bar2" Canvas.Left="256" Canvas.Top="511" Height="10" Width="170"/>
+            <Image  x:Name="UIRight2" Height="45" Canvas.Left="610" Canvas.Top="374" Width="54" Source="/TOYOTA 2;component/Assets/Images/button_right.png" MouseLeftButtonUp="UINext_Event" TouchUp="UITouch_Next_Event" IsManipulationEnabled="True"/>
+            <Image  x:Name="UILeft2" Height="45" Canvas.Left="20" Canvas.Top="374" Width="54" Source="/TOYOTA 2;component/Assets/Images/button_left.png" Visibility="Hidden" MouseLeftButtonUp="UIBack_Event" TouchUp="UITouch_Back_Event" IsManipulationEnabled="True"/>
+            <Canvas x:Name="UIFooter_Facebook" Width="663" Height="61" Canvas.Left="10" Canvas.Top="511" Visibility="Visible" >
+                <Image x:Name="UIImagePost" Height="33" Canvas.Left="153" Canvas.Top="18" Width="170" Source="/TOYOTA 2;component/Assets/Images/button_normal.png" MouseLeftButtonUp="UIButton_Post_Timeline" IsManipulationEnabled="True" TouchUp="UITouch_Post_Timeline_Event"/>
+                <Label Content="CHIA SẺ LÊN FACEBOOK" Canvas.Left="153" Canvas.Top="18" IsHitTestVisible="False"  Width="170" Height="33" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" FontFamily="Myriad Pro"/>
+                <Image x:Name="UIImageCover" Height="33" Canvas.Left="353" Canvas.Top="18" Width="195" Source="/TOYOTA 2;component/Assets/Images/button_big.png" MouseLeftButtonUp="UIButon_Set_Cover" IsManipulationEnabled="True" TouchUp="UITouch_Set_Cover_Event"/>
+                <Label Content="ĐẶT LÀM FACEBOOK COVER" Canvas.Left="353" IsHitTestVisible="False" Canvas.Top="18" Width="195" Height="33" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" FontFamily="Myriad Pro" />
+            </Canvas>
+            <Canvas x:Name="UIFooter_Mail" Width="663" Height="61" Canvas.Left="10" Canvas.Top="511" Visibility="Collapsed">
+                <Image x:Name="UIButton_SendEmail" Height="33" Canvas.Left="250" Canvas.Top="18" Width="170" Source="/TOYOTA 2;component/Assets/Images/button_normal.png" IsManipulationEnabled="True" MouseLeftButtonUp="UIBUtton_View_Popup" TouchUp="UITouch_View_Popup_Event"/>
+                <Label Content="GỬI MAIL" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Canvas.Left="255" Canvas.Top="21" Height="30" Width="168" Foreground="White" FontFamily="Myriad Pro" IsEnabled="False" IsHitTestVisible="False" />
+            </Canvas>
+
+        </Canvas>
+        <Canvas x:Name="UIFrame4" Width="{Binding Width, ElementName=UIRoot}" Height="{Binding Height, ElementName=UIRoot}" Canvas.Left="-683">
+            <Image Width="{Binding Width, ElementName=UIRoot}" Height="{Binding Height, ElementName=UIRoot}" Source="/TOYOTA 2;component/Assets/Images/Background_popup.png" Canvas.Left="0"/>
+            <TextBlock Canvas.Left="143" TextWrapping="Wrap" TextAlignment="Center"  Canvas.Top="170" Foreground="White" FontFamily="Myriad Pro" FontSize="17" FontWeight="SemiBold" Padding="5" LineHeight="20" Width="376"><Run Text="Cảm ơn bạn đã tham gia chương trình!"/><LineBreak/><Run Text="Vui lòng liên hệ với nhân viên của chúng tôi để"/><LineBreak/><Run Text="nhận hình ảnh của bạn."/></TextBlock>
+            <Image Height="33" Canvas.Left="351" Canvas.Top="266" Width="100" Source="/TOYOTA 2;component/Assets/Images/button_next.png" MouseLeftButtonUp="UIButton_Complete_Event" IsManipulationEnabled="True" TouchUp="UITouch_Complete_Event"/>
+            <Label Content="HOÀN TẤT" Canvas.Left="351" Canvas.Top="267" Height="32" Width="90" IsHitTestVisible="False" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" FontFamily="Myriad Pro" FontSize="13"/>
+            <Image Height="33" Canvas.Left="206" Canvas.Top="266" Width="100" Source="/TOYOTA 2;component/Assets/Images/button_back.png" MouseLeftButtonUp="UIButton_Back_TimeLine_Event" IsManipulationEnabled="True" TouchUp="UITouch_Back_TimeLine_Event"/>
+            <Label Content="QUAY LẠI" Canvas.Left="219" Canvas.Top="267" Height="32" Width="87" IsHitTestVisible="False" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" FontFamily="Myriad Pro" FontSize="13"/>
+        </Canvas>
+        <Canvas x:Name="UIFrame5" Width="{Binding Width, ElementName=UIRoot}" Height="{Binding Height, ElementName=UIRoot}" Canvas.Left="-683">
+            <Image Width="{Binding Width, ElementName=UIRoot}" Height="{Binding Height, ElementName=UIRoot}" Source="/TOYOTA 2;component/Assets/Images/Background_popup.png"/>
+            <TextBlock x:Name="UIMsg" Canvas.Left="129" TextWrapping="WrapWithOverflow" Text="Hình ảnh của bạn đã được in ra! Bạn không thể đổi theme khác!" TextAlignment="Center"  Canvas.Top="174" Foreground="White" FontFamily="Myriad Pro" FontSize="15" FontWeight="SemiBold" Padding="5" LineHeight="20"/>
+            <Image Height="33" Canvas.Left="452" Canvas.Top="209" Width="100" Source="/TOYOTA 2;component/Assets/Images/button_next.png" MouseLeftButtonUp="UIButton_OK_Alert" IsManipulationEnabled="True" TouchUp="UITouch_OK_Alert_Event"/>
+            <Label Content="OK" Canvas.Left="452" Canvas.Top="210" Height="32" Width="90" IsHitTestVisible="False" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" FontFamily="Myriad Pro" FontSize="13"/>
+        </Canvas>
+        <Canvas x:Name="UIFrame6" Width="{Binding Width, ElementName=UIRoot}" Height="{Binding Height, ElementName=UIRoot}" Canvas.Left="-683" ClipToBounds="True">
+            <Image Width="{Binding Width, ElementName=UIRoot}" Height="{Binding Height, ElementName=UIRoot}" Source="/TOYOTA 2;component/Assets/Images/Background_popup.png"/>
+            <TextBlock Canvas.Left="139" TextWrapping="Wrap" TextAlignment="Center"  Canvas.Top="169" Foreground="White" FontFamily="Myriad Pro" FontSize="17" FontWeight="SemiBold" Padding="5" LineHeight="20" Width="411"><Run Text="Cảm ơn bạn đã tham gia chương trình!"/><LineBreak/><Run Text="Hình ảnh đã được gửi vào hộp thư của bạn."/><LineBreak/><Run Text="Vui lòng liên hệ với nhân viên của chúng tôi để"/><LineBreak/><Run Text="nhận hình ảnh của bạn."/></TextBlock>
+            <Image Height="33" Canvas.Left="296" Canvas.Top="269" Width="100" Source="/TOYOTA 2;component/Assets/Images/button_next.png" MouseLeftButtonUp="UIButton_Complete_Event" IsManipulationEnabled="True" TouchUp="UITouch_Complete_Event"/>
+            <Label Content="HOÀN TẤT" Canvas.Left="296" Canvas.Top="270" Height="32" Width="90" IsHitTestVisible="False" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" FontFamily="Myriad Pro" FontSize="13"/>
+            <Image Visibility="Hidden" Height="33" Canvas.Left="218" Canvas.Top="266" Width="100" Source="/TOYOTA 2;component/Assets/Images/button_back.png" MouseLeftButtonUp="UIButton_Back_Email_Event" IsManipulationEnabled="True" TouchUp="UITouch_Back_Email_Event"/>
+            <Label Visibility="Hidden" Content="QUAY LẠI" Canvas.Left="231" Canvas.Top="267" Height="32" Width="87" IsHitTestVisible="False" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" FontFamily="Myriad Pro" FontSize="13"/>
+        </Canvas>
+        <Canvas x:Name="UIFrame0" Width="{Binding Width, ElementName=UIRoot}" Height="{Binding Height, ElementName=UIRoot}" Canvas.Left="-683" ClipToBounds="True">
+            <Image Width="{Binding Width, ElementName=UIRoot}" Height="{Binding Height, ElementName=UIRoot}" Source="/TOYOTA 2;component/Assets/Images/Background_frame.png" />
+            <Canvas Width="659" Height="64">
+                <Image Source="/TOYOTA 2;component/Assets/Images/header_user.png" Width="659" Height="64" Stretch="UniformToFill" Canvas.Left="12" />
+                <Image Height="45" Canvas.Left="25" Canvas.Top="9" Width="158" Source="/TOYOTA 2;component/Assets/Images/logo.png" IsManipulationEnabled="True" TouchUp="UITouch_Refresh" MouseLeftButtonUp="UIMouse_Refresh"/>
+                <Image Height="60" Width="91" Canvas.Left="396" Source="{Binding ImageSource}" Canvas.Top="2">
+                    <Image.OpacityMask>
+                        <ImageBrush ImageSource="/TOYOTA 2;component/Assets/Images/mask.png"/>
+                    </Image.OpacityMask>
+                </Image>
+            </Canvas>
+            <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Height="66" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="490" Foreground="#FF949494" FontFamily="Myriad Pro" FontSize="16" LineHeight="18" Canvas.Left="71.667" Canvas.Top="214"><Run Text="CHÀO MỪNG BẠN"/><Run Text=" "/><Run x:Name="UITextName" Text="Giang" Foreground="Red"/><LineBreak/><Run Text="ĐÃ THAM GIA HOẠT ĐỘNG CHỤP HÌNH TẠI TOYOTA VIỆT NAM"/></TextBlock>
+            <Image HorizontalAlignment="Left" Height="40" Grid.Row="2" VerticalAlignment="Top" Width="110" Source="Assets/Images/button_next.png" Canvas.Left="360" Canvas.Top="282" IsManipulationEnabled="True" MouseLeftButtonUp="UIButton_Comfirm_Event" TouchUp="UITouch_Comfirm_Event"/>
+            <Image HorizontalAlignment="Left" Height="40" Grid.Row="2" VerticalAlignment="Top" Width="110" Source="Assets/Images/button_back.png" Canvas.Left="164" Canvas.Top="280" IsManipulationEnabled="True" MouseLeftButtonUp="UIButton_Cancel_User_Event" TouchUp="UITouch_Cancel_User_Event"/>
+            <Label Content="TIẾP THEO" IsHitTestVisible="False" IsEnabled="False" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="30" Canvas.Left="360" Canvas.Top="282" Width="100" Foreground="White" FontFamily="Myriad Pro"/>
+            <Label Content="QUAY LẠI" IsHitTestVisible="False" IsEnabled="False" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="30" Canvas.Left="174" Canvas.Top="283" Width="100" Foreground="White" FontFamily="Myriad Pro"/>
+
+        </Canvas>
+        <Themes:Theme_Timeline_0 x:Name="UIImage_Timeline" Canvas.Left="683" Canvas.Top="0" Height="768" Width="1152" />
+        <Themes:Theme_Cover_0 x:Name="UIImage_Cover" Canvas.Left="688" Height="316" Width="852" Canvas.Top="3"/>
+        <Label Content="&#xF00D;" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="29" Canvas.Left="627" Canvas.Top="11" Width="35" FontFamily="/TOYOTA 2;component/Assets/Fonts/#FontAwesome" FontSize="21.333" Background="{x:Null}" Foreground="#FFFB0000" IsManipulationEnabled="True" MouseLeftButtonUp="UIClose_Event" TouchUp="UITouch_Close_Event"/>
+
+    </Canvas>
+
+</UserControl>
